@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F7F6F2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSeguimiento"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01696F"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seguimiento de Pedido"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#28251D"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codigo de pedido"
+            android:textSize="14sp"
+            android:textColor="#7A7974"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/etCodigoPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ej: PED001"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <Button
+            android:id="@+id/btnBuscarPedido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Buscar pedido"
+            android:backgroundTint="#01696F"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:id="@+id/tvResultadoPedido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="15sp"
+            android:textColor="#28251D"
+            android:lineSpacingExtra="6dp"
+            android:padding="16dp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</LinearLayout>

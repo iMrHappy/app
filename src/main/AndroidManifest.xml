@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ← PERMISOS DE RED -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <application
+        android:name=".BodegaApp"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Bodega Zegarra Huerta"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.Bodegazegarrahuerta">
+
+        <!-- Quita el intent-filter de MainActivity y ponlo aquí -->
+        <activity
+            android:name=".view.ProductosActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- MainActivity sin intent-filter -->
+        <activity android:name=".view.MainActivity" />
+
+        <!-- Asegúrate que estas activities estén declaradas -->
+        <activity android:name=".view.LoginActivity" />
+        <activity android:name=".view.LoginAdminActivity" />
+        <activity android:name=".view.AdminActivity" />
+        <activity android:name=".view.CarritoActivity" />
+        <activity android:name=".view.PagoActivity" />
+        <activity android:name=".view.SeguimientoActivity" />
+        <activity android:name=".view.FormProductoActivity" />
+
+    </application>
+
+</manifest>

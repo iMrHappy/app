@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F6F2">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01696F"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <!-- Contenido que cambia según tab -->
+    <LinearLayout
+        android:id="@+id/layoutContenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="?attr/actionBarSize"
+        android:paddingBottom="56dp">
+
+        <!-- Panel Productos -->
+        <LinearLayout
+            android:id="@+id/panelProductos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnNuevoProducto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+ Nuevo Producto"
+                android:backgroundTint="#01696F"
+                android:textColor="#FFFFFF"
+                android:layout_margin="12dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAdmin"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+        <!-- Panel Pedidos -->
+        <LinearLayout
+            android:id="@+id/panelPedidos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="8dp"
+                android:clipToPadding="false" />
+
+        </LinearLayout>
+
+        <!-- Panel Estadísticas -->
+        <LinearLayout
+            android:id="@+id/panelStats"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:gravity="top"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Resumen"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#28251D"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:id="@+id/tvTotalPedidos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total pedidos: -"
+                android:textSize="16sp"
+                android:textColor="#28251D"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvTotalVendido"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total vendido: -"
+                android:textSize="16sp"
+                android:textColor="#28251D"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvPedidosPorStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Por status: -"
+                android:textSize="14sp"
+                android:textColor="#7A7974"
+                android:padding="12dp"
+                android:background="#FFFFFF"
+                android:layout_marginBottom="12dp" />
+
+            <TextView
+                android:id="@+id/tvProductoTop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Producto mas pedido: -"
+                android:textSize="14sp"
+                android:textColor="#7A7974"
+                android:padding="12dp"
+                android:background="#FFFFFF" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Footer Admin -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:menu="@menu/bottom_nav_admin"
+        app:labelVisibilityMode="labeled"
+        app:itemIconTint="#01696F"
+        app:itemTextColor="#7A7974" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

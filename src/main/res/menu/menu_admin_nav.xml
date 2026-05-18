@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/admin_nav_productos"
+        android:title="Productos"
+        android:icon="@android:drawable/ic_menu_manage" />
+    <item android:id="@+id/admin_nav_pedidos"
+        android:title="Pedidos"
+        android:icon="@android:drawable/ic_menu_recent_history" />
+    <item android:id="@+id/admin_nav_stats"
+        android:title="Stats"
+        android:icon="@android:drawable/ic_menu_sort_by_size" />
+    <item android:id="@+id/admin_nav_salir"
+        android:title="Salir"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel" />
+</menu>
